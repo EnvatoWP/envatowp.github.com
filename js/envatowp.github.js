@@ -1,3 +1,9 @@
+/**
+ * Functions to retrieve and display GitHub information on the EnvatoWP GitHub page.
+ *
+ * @author Japh <japh@envato.com>
+ * @version 1.0
+ */
 $(function() {
 
 	$body = $('body');
