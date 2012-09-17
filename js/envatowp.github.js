@@ -104,6 +104,10 @@ $(function() {
 							content += ' ' + this['payload']['action'] + ' <a href="' + this['payload']['pull_request']['html_url'] + '">pull request ' + this['payload']['number'] + '</a> on ';
 							content += '<a href="' + eventRepoUrl + '">' + eventRepo + '</a>';
 							break;
+
+						case 'MemberEvent':
+							content += ' ' + this['payload']['action'] + ' <a href="https://github.com/' + this['payload']['member']['login'] + '">' + this['payload']['member']['login'] + '</a> to ';
+							content += '<a href="' + eventRepoUrl + '">' + eventRepo + '</a>';
 					}
 					var eventTime = new Date( eventCreated );
 					content += ' <time datetime="' + eventCreated + '" title="' + eventTime.toLocaleString() + '">' + time_ago( eventTime.getTime() / 1000 ) + '</time>';
